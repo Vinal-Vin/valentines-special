@@ -1,1 +1,197 @@
-/* Empty - using Tailwind CSS for styling */
+/* Valentine's Day Theme Enhancements */
+
+/* Animated floating hearts background */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-hearts::before,
+.floating-hearts::after {
+  content: '💖';
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: float 15s infinite ease-in-out;
+}
+
+.floating-hearts::before {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-hearts::after {
+  content: '💕';
+  left: 80%;
+  animation-delay: 5s;
+}
+
+/* Heart floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Sparkle effect */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+.sparkle {
+  animation: sparkle 1.5s infinite;
+}
+
+/* Heart beat animation for icons */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.05);
+  }
+}
+
+.heartbeat {
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(45deg, #ff6b9d, #c44569, #ff6b9d, #ea6aa8);
+  background-size: 300% 300%;
+  animation: gradient-shift 3s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Rose petals falling animation */
+.falling-petals {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffb6d9, #ff69b4);
+  border-radius: 50% 0 50% 0;
+  opacity: 0.5;
+  animation: fall 10s infinite linear;
+}
+
+.petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+.petal:nth-child(2) { left: 20%; animation-delay: 2s; }
+.petal:nth-child(3) { left: 30%; animation-delay: 4s; }
+.petal:nth-child(4) { left: 40%; animation-delay: 1s; }
+.petal:nth-child(5) { left: 50%; animation-delay: 3s; }
+.petal:nth-child(6) { left: 60%; animation-delay: 5s; }
+.petal:nth-child(7) { left: 70%; animation-delay: 2.5s; }
+.petal:nth-child(8) { left: 80%; animation-delay: 4.5s; }
+.petal:nth-child(9) { left: 90%; animation-delay: 1.5s; }
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmer effect for buttons */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer-slide 3s infinite;
+}
+
+@keyframes shimmer-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Cupid's head -->
+  <circle cx="50" cy="30" r="15" fill="#ffd4a3"/>
+  <!-- Cupid's body -->
+  <ellipse cx="50" cy="55" rx="12" ry="18" fill="#fff0f5"/>
+  <!-- Wings -->
+  <ellipse cx="35" cy="45" rx="15" ry="12" fill="#f0e6ff" opacity="0.8"/>
+  <ellipse cx="65" cy="45" rx="15" ry="12" fill="#f0e6ff" opacity="0.8"/>
+  <!-- Bow -->
+  <path d="M30 50 Q35 45 40 50" stroke="#8b4513" stroke-width="2" fill="none"/>
+  <line x1="40" y1="50" x2="70" y2="35" stroke="#8b4513" stroke-width="2"/>
+  <!-- Arrow -->
+  <line x1="70" y1="35" x2="85" y2="25" stroke="#cd853f" stroke-width="2"/>
+  <polygon points="85,25 88,23 86,28" fill="#cd853f"/>
+</svg>
